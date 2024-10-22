@@ -1,0 +1,55 @@
+*{
+    font-family: 'Finntype', Arial, Helvetica, sans-serif;
+}
+body {
+  margin: 0px;
+  height: 100vh;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "nav nav nav nav nav nav"
+    "padding main main main main ad"
+    "padding main main main main ad";
+  gap: 10px;
+  grid-template-columns: auto;
+  background-color: #2196f3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+}
+.header {
+  grid-area: nav;
+  display: grid;
+  grid-template-areas: 'finn tom button';
+  grid-template-columns: 2fr 3fr 0fr  ;
+  font-size: 12px;
+  font-weight: bold;
+}
+.header a{
+    color: black;
+    text-decoration: none;
+    padding: 0 11px;
+}
+.finn{
+    grid-area: finn;
+    justify-content: start;
+}
+.buttons{
+    padding: 10px;
+}
+
+.padding {
+  grid-area: padding;
+}
+.main {
+  grid-area: main;
+}
+.ad {
+  grid-area: ad;
+}
