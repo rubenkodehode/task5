@@ -9,11 +9,11 @@ body {
 .grid-container {
   display: grid;
   grid-template-areas:
-    "nav nav nav nav nav nav"
-    "padding main main main main ad"
-    "padding main main main main ad";
+    "nav nav nav"
+    "padding main ad"
+    "padding main ad";
   gap: 10px;
-  grid-template-columns: auto;
+  grid-template-columns: 1fr 2fr 1fr;
 }
 
 .grid-container > div {
@@ -94,6 +94,7 @@ body {
   display: grid;
   grid-template-areas: "search glass map";
   grid-template-columns: 3fr 0fr 1fr;
+  height: fit-content;
 }
 .searchbar {
   grid-area: search;
@@ -156,8 +157,51 @@ body {
 .mittanbud{
   grid-area: mittanbud;
 }
+.maintext{
+  display: grid;
+  grid-template-areas: 'bigtxt smalltxt';
+  grid-template-columns: 1fr 3fr;
+  align-items: baseline;
+  gap: 0;
+  height: fit-content;
+}
+.bigtxt{
+  grid-area: bigtxt;
+  font-size: 18px;
+}
+.smalltxt{
+  grid-area: smalltxt;
+  font-size: 10px;
+  color: blue;
+}
+.bottommain{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 'roma dog car';
+  gap: 10px;
+  height: fit-content;
+}
+.box1{
+  grid-area: roma;
+}
+.box2{
+  grid-area: dog;
+}
+.box3{
+  grid-area: car;
+}
+.pix1, .pix2, .pix3{
+  height: 300px;
+  width: 300px;
+  border: 1px solid;
+  border-radius: 25px;
+}
 .ad {
   grid-area: ad;
+}
+.ad-img{
+  width: 95%;
+  height: 90%;
 }
 
 i {
